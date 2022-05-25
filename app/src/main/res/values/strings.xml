@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FoodOrderApp</string>
+    <string name="order_places_successfully">Order places successfully.</string>
+    <string name="done">Done</string>
+</resources>

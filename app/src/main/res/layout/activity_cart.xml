@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/buttonThanhToan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_bg"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Thanh Toán"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotal"
+        app:layout_constraintVertical_bias="0.262"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView android:id="@+id/txtDanhsachCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_margin="10dp"
+        android:text="Danh sách hóa đơn"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hoadonView"
+        android:layout_width="411dp"
+        android:layout_height="222dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDanhsachCart" />
+
+    <TextView android:id="@+id/tvSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hoadonView"
+        android:layout_margin="10dp"
+        android:text="Sub total"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView android:id="@+id/tvSubtotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hoadonView"
+        android:layout_margin="10dp"
+        android:text="$0.0"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView android:id="@+id/tvDeliveryCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtotal"
+        android:layout_margin="10dp"
+        android:text="Phí vận chuyển"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView android:id="@+id/tvDeliveryChargeAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtotal"
+        android:layout_margin="10dp"
+        android:text="$0.0"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeliveryCharge"
+        android:layout_margin="10dp"
+        android:text="Tổng chi phí"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeliveryCharge"
+        android:layout_margin="10dp"
+        android:text="$0.0"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
